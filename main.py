@@ -4,7 +4,7 @@ import face_recognition
 import time
 
 # Path to the reference image in the images folder
-reference_image_path = 'images/reference.jpg'
+reference_image_path = 'images/profile-headshot.jpg'
 
 # Load the reference image
 reference_image = face_recognition.load_image_file(reference_image_path)
@@ -56,7 +56,7 @@ def accessWebcam():
                 # If match is found, display the name on the bounding box
                 if match[0]:
                     cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                    cv2.putText(frame, "Person Name", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                    cv2.putText(frame, "Raymond", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
                 else:
                     cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
             else:
