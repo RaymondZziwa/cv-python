@@ -2,7 +2,7 @@ import cv2
 import os
 import face_recognition
 import time
-
+ 
 # Path to the reference image in the images folder
 reference_image_path = 'images/profile-headshot.jpg'
 
